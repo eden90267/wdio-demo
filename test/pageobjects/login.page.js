@@ -1,6 +1,19 @@
 var Page = require('./page');
 var LoginPage = Object.create(Page, {
 
+  // 測試資料
+  content: {
+    get: () => {
+      return {
+        email: 'demo@keystonejs.com',
+        correctPassword: 'demo',
+        worryPassword: '1234',
+        errorMessage: 'The email and password you entered are not valid.',
+        infoMessage: 'You have been signed out.',
+      }
+    }
+  },
+
   // 定義元素
   email: {
     get: function () {

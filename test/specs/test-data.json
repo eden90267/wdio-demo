@@ -1,0 +1,7 @@
+{
+  "email": "demo@keystonejs.com",
+  "correctPassword": "demo",
+  "worryPassword": "1111",
+  "errorMessage": "The email and password you entered are not valid.",
+  "infoMessage": "You have been signed out."
+}
