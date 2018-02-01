@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js"
+    "test": "wdio wdio.conf.js",
+    "dev-test": "chimp --mocha --watch --path=test",
+    "test-with-docker": "docker-compose up -d && npm test && docker-compose down"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "devDependencies": {
     "app-root-path": "^2.0.1",
     "chai": "^4.1.2",
+    "chimp": "^0.51.0",
     "mocha": "^5.0.0",
     "wdio-junit-reporter": "^0.3.1",
     "wdio-mocha-framework": "^0.5.12",
