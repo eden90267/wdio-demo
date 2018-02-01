@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" timestamp="2018-02-01T14:57:02" time="19.373" tests="3" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="6ae86d57624fa3107aa35533d5a16b43"/>
+      <property name="suiteName" value="第一個前端測試程式"/>
+      <property name="capabilities" value="firefox"/>
+      <property name="file" value="./test/specs/login.test.js"/>
+    </properties>
+    <testcase classname="firefox." name="" time="7.414">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/url - {"url":"http://demo.keystonejs.com/keystone/signin"}
+RESULT: {"state":"success","sessionId":null,"hCode":1356248140,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"input[name=email]"}
+RESULT: {"state":"success","sessionId":null,"hCode":1149253372,"value":{"element-6066-11e4-a52e-4f735466cecf":"5d077a01-8789-7443-8d41-28e4b1e6065a"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/5d077a01-8789-7443-8d41-28e4b1e6065a/clear - {}
+RESULT: {"state":"success","sessionId":null,"hCode":1786460316,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/5d077a01-8789-7443-8d41-28e4b1e6065a/value - {"value":["d","e","m","o","@","k","e","y","s","t","(9 more items)"],"text":"demo@keystonejs.com"}
+RESULT: {"state":"success","sessionId":null,"hCode":1179898622,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"input[name=password]"}
+RESULT: {"state":"success","sessionId":null,"hCode":782355069,"value":{"element-6066-11e4-a52e-4f735466cecf":"dce98250-6bdc-194f-b1c5-5652f796ccda"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/dce98250-6bdc-194f-b1c5-5652f796ccda/clear - {}
+RESULT: {"state":"success","sessionId":null,"hCode":2081104628,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/dce98250-6bdc-194f-b1c5-5652f796ccda/value - {"value":["1","2","3","4"],"text":"1234"}
+RESULT: {"state":"success","sessionId":null,"hCode":753986428,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"button[type=submit]"}
+RESULT: {"state":"success","sessionId":null,"hCode":331474017,"value":{"element-6066-11e4-a52e-4f735466cecf":"84e0ef0f-b22f-c444-878f-ece180f31b23"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/84e0ef0f-b22f-c444-878f-ece180f31b23/click - {}
+RESULT: {"state":"success","sessionId":null,"hCode":631976478,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"[data-alert-type=danger]"}
+RESULT: {"message":"Unable to locate element: [data-alert-type=danger]\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'\nSystem info: host: 'edenliu.local', ip: 'fe80:0:0:0:c74:7106:d759:e37c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_161'\nDriver info: driver.version: unknown","type":"RuntimeError","seleniumStack":{"type":"NoSuchElement","message":"An element could not be located on the page using the given search parameters.","orgStatusMessage":"Unable to locate element: [data-alert-type=danger]\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'\nSystem info: host: 'edenliu.local', ip: 'fe80:0:0:0:c74:7106:d759:e37c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_161'\nDriver info: driver.version: unknown"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[data-alert-type=danger]"}
+RESULT: {"state":"success","sessionId":null,"hCode":850112613,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[data-alert-type=danger]"}
+RESULT: {"state":"success","sessionId":null,"hCode":1113139489,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[data-alert-type=danger]"}
+RESULT: {"state":"success","sessionId":null,"hCode":582532899,"value":[{"element-6066-11e4-a52e-4f735466cecf":"cdfa3e40-f7bd-0e47-b4a2-621557309e9b"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"[data-alert-type=danger]"}
+RESULT: {"state":"success","sessionId":null,"hCode":2030919830,"value":{"element-6066-11e4-a52e-4f735466cecf":"cdfa3e40-f7bd-0e47-b4a2-621557309e9b"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/cdfa3e40-f7bd-0e47-b4a2-621557309e9b/text - {}
+RESULT: {"state":"success","sessionId":null,"hCode":735203922,"value":"The email and password you entered are not valid.","class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="firefox." name="" time="7.231">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"input[name=email]"}
+RESULT: {"state":"success","sessionId":null,"hCode":1443504934,"value":{"element-6066-11e4-a52e-4f735466cecf":"5d077a01-8789-7443-8d41-28e4b1e6065a"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/5d077a01-8789-7443-8d41-28e4b1e6065a/clear - {}
+RESULT: {"state":"success","sessionId":null,"hCode":548666803,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/5d077a01-8789-7443-8d41-28e4b1e6065a/value - {"value":["d","e","m","o","@","k","e","y","s","t","(9 more items)"],"text":"demo@keystonejs.com"}
+RESULT: {"state":"success","sessionId":null,"hCode":1630125199,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"input[name=password]"}
+RESULT: {"state":"success","sessionId":null,"hCode":763987290,"value":{"element-6066-11e4-a52e-4f735466cecf":"dce98250-6bdc-194f-b1c5-5652f796ccda"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/dce98250-6bdc-194f-b1c5-5652f796ccda/clear - {}
+RESULT: {"state":"success","sessionId":null,"hCode":182320066,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/dce98250-6bdc-194f-b1c5-5652f796ccda/value - {"value":["d","e","m","o"],"text":"demo"}
+RESULT: {"state":"success","sessionId":null,"hCode":1019657683,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"button[type=submit]"}
+RESULT: {"state":"success","sessionId":null,"hCode":418366731,"value":{"element-6066-11e4-a52e-4f735466cecf":"84e0ef0f-b22f-c444-878f-ece180f31b23"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/84e0ef0f-b22f-c444-878f-ece180f31b23/click - {}
+RESULT: {"state":"success","sessionId":null,"hCode":1857445966,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"message":"Unable to locate element: [title=\"Sign Out\"]\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'\nSystem info: host: 'edenliu.local', ip: 'fe80:0:0:0:c74:7106:d759:e37c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_161'\nDriver info: driver.version: unknown","type":"RuntimeError","seleniumStack":{"type":"NoSuchElement","message":"An element could not be located on the page using the given search parameters.","orgStatusMessage":"Unable to locate element: [title=\"Sign Out\"]\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T19:05:32.194Z'\nSystem info: host: 'edenliu.local', ip: 'fe80:0:0:0:c74:7106:d759:e37c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_161'\nDriver info: driver.version: unknown"}}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":616677487,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":881293687,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":1812413271,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":684366775,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":2036401194,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":695171121,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":1696156076,"value":[],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":277950528,"value":[{"element-6066-11e4-a52e-4f735466cecf":"dd9516fb-3c8b-bb47-9440-bade915f3a92"}],"class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="firefox." name="" time="4.726">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":null,"hCode":1777234469,"value":{"element-6066-11e4-a52e-4f735466cecf":"dd9516fb-3c8b-bb47-9440-bade915f3a92"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/dd9516fb-3c8b-bb47-9440-bade915f3a92/click - {}
+RESULT: {"state":"success","sessionId":null,"hCode":1494616369,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"[data-alert-type=info]"}
+RESULT: {"state":"success","sessionId":null,"hCode":766740595,"value":{"element-6066-11e4-a52e-4f735466cecf":"182cce65-8f67-a141-a765-3de188539b57"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/elements - {"using":"css selector","value":"[data-alert-type=info]"}
+RESULT: {"state":"success","sessionId":null,"hCode":1697316502,"value":[{"element-6066-11e4-a52e-4f735466cecf":"182cce65-8f67-a141-a765-3de188539b57"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element - {"using":"css selector","value":"[data-alert-type=info]"}
+RESULT: {"state":"success","sessionId":null,"hCode":1457528009,"value":{"element-6066-11e4-a52e-4f735466cecf":"182cce65-8f67-a141-a765-3de188539b57"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608/element/182cce65-8f67-a141-a765-3de188539b57/text - {}
+RESULT: {"state":"success","sessionId":null,"hCode":166758658,"value":"You have been signed out.","class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: DELETE http://127.0.0.1:4444/wd/hub/session/2028245b-2ae9-4742-9a92-095ba6541608 - {}
+RESULT: {"state":"success","sessionId":null,"hCode":929822152,"value":{},"class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
