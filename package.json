@@ -6,7 +6,7 @@
   "scripts": {
     "test": "wdio wdio.conf.js",
     "dev-test": "chimp --mocha --watch --path=test",
-    "test-with-docker": "docker-compose down && docker-compose up -d && docker logs -f test"
+    "test-with-docker": "docker build -t wdio-demo . && docker-compose down && docker-compose up -d && docker logs -f test"
   },
   "keywords": [],
   "author": "",

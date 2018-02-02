@@ -35,23 +35,12 @@ services:
     networks:
       - front-tier
 
-  build:
-    container_name: build
-    image: node:8
-    volumes:
-      - ./:/wdio-demo
-    working_dir: /wdio-demo
-    command: "npm install"
-
   test:
     container_name: test
-    image: node:8
+    image: wdio-demo
     depends_on:
       - firefox
       - chrome
-      - build
-    volumes:
-      - ./:/wdio-demo
     working_dir: /wdio-demo
     command: "npm test"
     networks:
