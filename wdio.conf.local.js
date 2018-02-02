@@ -130,8 +130,8 @@ exports.config = {
   // commands. Instead, they hook themselves up into the test process.
 
   // services: ['testingbot'],
-  host: 'hub',
-  port: 4444,
+  // host: 'hub.testingbot.com',
+  // port: 80,
   // user: process.env.TESTINGBOT_KEY,
   // key: process.env.TESTINGBOT_SECRET,
 

@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3'
 
 services:
   firefox:
@@ -8,7 +8,10 @@ services:
     depends_on:
       - hub
     environment:
-      HUB_PORT_4444_TCP_ADDR: hub
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    networks:
+      - front-tier
 
   chrome:
     image: selenium/node-chrome:2.53.1
@@ -17,9 +20,34 @@ services:
     depends_on:
       - hub
     environment:
-      HUB_PORT_4444_TCP_ADDR: hub
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444
+    networks:
+      - front-tier
 
   hub:
+    container_name: hub
     image: selenium/hub:2.53.1
     ports:
       - "4444:4444"
+    expose:
+      - "4444"
+    networks:
+      - front-tier
+
+  debug:
+    container_name: debug
+    image: node:8
+    depends_on:
+      - firefox
+      - chrome
+    volumes:
+      - ./:/wdio-demo
+    working_dir: /wdio-demo
+    command: "npm run test-with-docker"
+    networks:
+      - front-tier
+
+networks:
+  front-tier:
+    driver: bridge

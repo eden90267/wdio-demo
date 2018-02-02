@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  firefox:
+    image: selenium/node-firefox:2.53.1
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+
+  chrome:
+    image: selenium/node-chrome:2.53.1
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+
+  hub:
+    container_name: hub
+    image: selenium/hub:2.53.1
+    ports:
+      - "4444:4444"
