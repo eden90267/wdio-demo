@@ -6,8 +6,8 @@
   "scripts": {
     "test": "wdio wdio.conf.js",
     "dev-test": "chimp --mocha --watch --path=test",
-    "test-with-docker": "npm i && npm test",
-    "test-with-docker-local": "docker-compose -f docker-compose.local.yml up -d && wdio wdio.conf.local.js && docker-compose -f docker-compose.local.yml down"
+    "init-and-test": "npm i && npm test",
+    "test-with-docker": "docker-compose down && docker-compose up -d && docker logs -f debug"
   },
   "keywords": [],
   "author": "",

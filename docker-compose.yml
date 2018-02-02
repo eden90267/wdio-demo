@@ -44,7 +44,7 @@ services:
     volumes:
       - ./:/wdio-demo
     working_dir: /wdio-demo
-    command: "npm run test-with-docker"
+    command: "npm run init-and-test"
     networks:
       - front-tier
 
