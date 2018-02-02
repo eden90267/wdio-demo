@@ -42,7 +42,7 @@ services:
       - firefox
       - chrome
     volumes:
-      - ./:/wdio-demo
+      - ./test-reports:/wdio-demo/test-reports
     working_dir: /wdio-demo
     command: "npm test"
     networks:
