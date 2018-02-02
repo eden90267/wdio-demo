@@ -41,6 +41,8 @@ services:
     depends_on:
       - firefox
       - chrome
+    volumes:
+      - ./:/wdio-demo
     working_dir: /wdio-demo
     command: "npm test"
     networks:
