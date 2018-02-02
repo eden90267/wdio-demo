@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" timestamp="2018-02-02T08:10:41" time="19.461" tests="3" failures="0" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="1a30cb6f57715f26575bca216db52ec9"/>
+      <property name="suiteName" value="第一個前端測試程式"/>
+      <property name="capabilities" value="firefox"/>
+      <property name="file" value="./test/specs/login.test.js"/>
+    </properties>
+    <testcase classname="firefox." name="" time="7.404">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/url - {"url":"http://demo.keystonejs.com/keystone/signin"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":609666914,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"input[name=email]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":2065527909,"value":{"ELEMENT":"0"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/0/clear - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":2006522575,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/0/value - {"value":["d","e","m","o","@","k","e","y","s","t","(9 more items)"],"text":"demo@keystonejs.com"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1701232265,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"input[name=password]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1967673372,"value":{"ELEMENT":"1"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/1/clear - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":4557315,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/1/value - {"value":["1","2","3","4"],"text":"1234"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1060480934,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"button[type=submit]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1878508607,"value":{"ELEMENT":"2"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/2/click - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1957768685,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"[data-alert-type=danger]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1714138186,"value":{"ELEMENT":"3"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/elements - {"using":"css selector","value":"[data-alert-type=danger]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":925649548,"value":[{"ELEMENT":"3"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"[data-alert-type=danger]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":716343005,"value":{"ELEMENT":"3"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/3/text - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1460738083,"value":"The email and password you entered are not valid.","class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="firefox." name="" time="7.592">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"input[name=email]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1818470263,"value":{"ELEMENT":"0"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/0/clear - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":969865309,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/0/value - {"value":["d","e","m","o","@","k","e","y","s","t","(9 more items)"],"text":"demo@keystonejs.com"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":133432791,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"input[name=password]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1492899082,"value":{"ELEMENT":"1"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/1/clear - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":701663613,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/1/value - {"value":["d","e","m","o"],"text":"demo"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1729134602,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"button[type=submit]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1080945538,"value":{"ELEMENT":"2"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/2/click - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1178084608,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":2073871835,"value":{"ELEMENT":"4"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/elements - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":409934450,"value":[{"ELEMENT":"4"}],"class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname="firefox." name="" time="4.463">
+      <error message="expected 'You have been signed out.' to include 'You have been signe22d out.'"/>
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"[title=\"Sign Out\"]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":759777543,"value":{"ELEMENT":"4"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/4/click - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1301637718,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"[data-alert-type=info]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1959131393,"value":{"ELEMENT":"5"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/elements - {"using":"css selector","value":"[data-alert-type=info]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1931648860,"value":[{"ELEMENT":"5"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element - {"using":"css selector","value":"[data-alert-type=info]"}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":348447054,"value":{"ELEMENT":"5"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b/element/5/text - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":699600102,"value":"You have been signed out.","class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: DELETE http://hub:4444/wd/hub/session/9167cc0c-65de-4f85-bf66-83a937f5257b - {}
+RESULT: {"state":"success","sessionId":"9167cc0c-65de-4f85-bf66-83a937f5257b","hCode":1309454067,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+      <system-err>
+        <![CDATA[
+AssertionError: expected 'You have been signed out.' to include 'You have been signe22d out.'
+    at Context.<anonymous> (/wdio-demo/test/specs/login.test.js:43:46)
+    at new Promise (<anonymous>)
+    at new F (/wdio-demo/node_modules/core-js/library/modules/_export.js:35:28)
+]]>
+      </system-err>
+    </testcase>
+  </testsuite>
+</testsuites>

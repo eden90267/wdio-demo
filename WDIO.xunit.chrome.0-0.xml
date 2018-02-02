@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="test" timestamp="2018-02-02T08:10:32" time="4.395" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0b81b034d7e1b0fa0eaad31f27c4259e"/>
+      <property name="suiteName" value="test"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./test/specs/basic-auth.test.js"/>
+    </properties>
+    <testcase classname="chrome.test" name="basic_auth" time="4.389">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://hub:4444/wd/hub/session/c81c4cd4-7ef9-4a23-8a1c-a7da97795363/url - {"url":"http://admin:admin@the-internet.herokuapp.com/basic_auth"}
+RESULT: {"state":"success","sessionId":"c81c4cd4-7ef9-4a23-8a1c-a7da97795363","hCode":492455832,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/c81c4cd4-7ef9-4a23-8a1c-a7da97795363/elements - {"using":"css selector","value":".example > p"}
+RESULT: {"state":"success","sessionId":"c81c4cd4-7ef9-4a23-8a1c-a7da97795363","hCode":2133956549,"value":[{"ELEMENT":"0"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/c81c4cd4-7ef9-4a23-8a1c-a7da97795363/elements - {"using":"css selector","value":".example > p"}
+RESULT: {"state":"success","sessionId":"c81c4cd4-7ef9-4a23-8a1c-a7da97795363","hCode":432011780,"value":[{"ELEMENT":"0"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://hub:4444/wd/hub/session/c81c4cd4-7ef9-4a23-8a1c-a7da97795363/element/0/text - {}
+RESULT: {"state":"success","sessionId":"c81c4cd4-7ef9-4a23-8a1c-a7da97795363","hCode":1757494941,"value":"Congratulations! You must have the proper credentials.","class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: DELETE http://hub:4444/wd/hub/session/c81c4cd4-7ef9-4a23-8a1c-a7da97795363 - {}
+RESULT: {"state":"success","sessionId":"c81c4cd4-7ef9-4a23-8a1c-a7da97795363","hCode":239638107,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="test" timestamp="2018-02-02T08:10:38" time="4.839" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="97e537137a032c04d17e17836b074f17"/>
+      <property name="suiteName" value="test"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./test/specs/upload.test.js"/>
+    </properties>
+    <testcase classname="chrome.test" name="" time="4.837">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/url - {"url":"http://the-internet.herokuapp.com/upload"}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":1749136979,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/file - {"file":"[base64] 26916 bytes"}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":367959921,"value":"/tmp/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/upload1868261756604166661file/sign.png","class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/elements - {"using":"id","value":"file-upload"}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":754403079,"value":[{"ELEMENT":"0"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/element/0/value - {"value":["/","t","m","p","/","6","5","0","c","a","(70 more items)"],"text":"/tmp/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/upload1868261756604166661file/sign.png"}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":780493779,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/element - {"using":"id","value":"file-submit"}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":1266289606,"value":{"ELEMENT":"1"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/element/1/click - {}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":1656672864,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/elements - {"using":"id","value":"uploaded-files"}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":1620547414,"value":[{"ELEMENT":"2"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/elements - {"using":"id","value":"uploaded-files"}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":31522807,"value":[{"ELEMENT":"2"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6/element/2/text - {}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":248463967,"value":"sign.png","class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: DELETE http://hub:4444/wd/hub/session/650ca1f9-f15a-4d73-9571-bc7fd6cc24a6 - {}
+RESULT: {"state":"success","sessionId":"650ca1f9-f15a-4d73-9571-bc7fd6cc24a6","hCode":443984948,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
