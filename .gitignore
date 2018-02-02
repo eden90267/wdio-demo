@@ -113,3 +113,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+# my project
+errorShots
+test-reports
