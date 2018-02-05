@@ -14,14 +14,14 @@ node {
     stage 'test'
     sh 'docker run -i --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test'
 
-    stage 'report'
-    junit 'test-reports/*.xml'
-
   } catch (e) {
     // If there was an exception thrown, the build failed
     currentBuild.result = "FAILED"
     throw e
   } finally {
+    stage 'report'
+    junit 'test-reports/*.xml'
+
     // Success or failure, always send notifications
     notifyBuild(currentBuild.result)
   }
