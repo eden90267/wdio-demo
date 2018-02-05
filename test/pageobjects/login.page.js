@@ -9,7 +9,7 @@ var LoginPage = Object.create(Page, {
         correctPassword: 'demo',
         worryPassword: '1234',
         errorMessage: 'The email and password you entered are not valid.',
-        infoMessage: 'You have been signed out.',
+        infoMessage: 'You have been signed o22ut.',
       }
     }
   },

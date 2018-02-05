@@ -8,7 +8,7 @@
     "dev-test": "chimp --mocha --watch --path=test",
     "start-selenium-server-with-docker": "docker-compose down && docker-compose up -d",
     "build-with-docker": "docker build -t wdio-demo .",
-    "run-test-with-docker": "docker run -ti --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test",
+    "run-test-with-docker": "docker run -i --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test",
     "test-with-docker": "npm run start-selenium-server-with-docker && npm run build-with-docker && npm run run-test-with-docker"
   },
   "keywords": [],

@@ -12,7 +12,7 @@ node {
     sh 'docker build -t wdio-demo .'
 
     stage 'test'
-    sh 'docker run -ti --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test'
+    sh 'docker run -i --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test'
 
     stage 'report'
     junit 'test-reports/*.xml'
