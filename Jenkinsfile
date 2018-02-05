@@ -14,7 +14,7 @@ node {
     stage 'report'
     junit 'test-reports/*.xml'
 
-  catch (e) {
+  } catch (e) {
     // If there was an exception thrown, the build failed
     currentBuild.result = "FAILED"
     throw e
