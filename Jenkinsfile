@@ -47,5 +47,5 @@ def notifyBuild(String buildStatus = 'STARTED') {
   }
 
   // Send notifications
-  slackSend color: colorCode, message: summary
+  slackSend baseUrl: 'https://104corp.slack.com/services/hooks/jenkins-ci/', channel: '#cteam-jenkins-ci', color: colorCode, message: summary, tokenCredentialId: 'jenkins-ci-integration-slack-token'
 }
