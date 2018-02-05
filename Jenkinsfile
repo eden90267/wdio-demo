@@ -2,14 +2,17 @@ node {
   try {
     notifyBuild('STARTED')
 
-    stage 'Checkout'
+    stage 'checkout'
     git 'https://github.com/eden90267/wdio-demo'
+
+    stage 'start selenium-server'
+    sh 'docker-compose down && docker-compose up -d'
 
     stage 'build'
     sh 'docker build -t wdio-demo .'
 
     stage 'test'
-    sh 'docker-compose down && docker-compose up -d && docker logs -f test'
+    sh 'docker run -ti --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test'
 
     stage 'report'
     junit 'test-reports/*.xml'

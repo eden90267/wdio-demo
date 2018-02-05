@@ -35,18 +35,18 @@ services:
     networks:
       - front-tier
 
-  test:
-    container_name: test
-    image: wdio-demo
-    depends_on:
-      - firefox
-      - chrome
-    volumes:
-      - ./test-reports:/wdio-demo/test-reports
-    working_dir: /wdio-demo
-    command: "npm test"
-    networks:
-      - front-tier
+#  test:
+#    container_name: test
+#    image: wdio-demo
+#    depends_on:
+#      - firefox
+#      - chrome
+#    volumes:
+#      - ./test-reports:/wdio-demo/test-reports
+#    working_dir: /wdio-demo
+#   command: "npm test"
+#    networks:
+#      - front-tier
 
 networks:
   front-tier:
