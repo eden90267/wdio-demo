@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev-test": "wdio wdio.conf.dev.js",
+    "dev-watch-test": "chimp --mocha --watch --path=test",
     "test": "wdio wdio.conf.js",
-    "dev-test": "chimp --mocha --watch --path=test",
     "start-selenium-server-with-docker": "docker-compose down && docker-compose up -d",
     "build-with-docker": "docker build -t wdio-demo .",
     "run-test-with-docker": "docker run -i --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test",
