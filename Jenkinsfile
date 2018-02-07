@@ -1,5 +1,5 @@
 node {
-  def jobName = JOB_NAME.replace("-", "");
+  def jobName = JOB_NAME.replace("-", "").replace("_", "").toLowerCase();
 
   try {
     notifyBuild('STARTED')
