@@ -1,4 +1,6 @@
 node {
+  def jobName = JOB_NAME.replace("-", "");
+
   try {
     notifyBuild('STARTED')
 
@@ -12,7 +14,7 @@ node {
     sh 'docker build -t wdio-demo .'
 
     stage 'test'
-    sh 'docker run -i --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test'
+    sh 'docker run -i --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network="${jobName}"_front-tier wdio-demo npm test'
 
   } catch (e) {
     // If there was an exception thrown, the build failed
