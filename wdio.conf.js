@@ -130,7 +130,7 @@ exports.config = {
   // commands. Instead, they hook themselves up into the test process.
 
   // services: ['testingbot'],
-  host: 'hub',
+  host: 'wdio-demo_hub',
   port: 4444,
   // user: process.env.TESTINGBOT_KEY,
   // key: process.env.TESTINGBOT_SECRET,
