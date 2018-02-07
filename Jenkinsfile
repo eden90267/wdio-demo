@@ -6,7 +6,7 @@ node {
     git 'https://github.com/eden90267/wdio-demo'
 
     stage 'start selenium-server'
-    sh 'docker-compose down && docker-compose up -d'
+    sh 'docker-compose up -d'
 
     stage 'build'
     sh 'docker build -t wdio-demo .'
@@ -24,6 +24,8 @@ node {
 
     // Success or failure, always send notifications
     notifyBuild(currentBuild.result)
+
+    sh 'docker-compose down'
   }
 }
 
