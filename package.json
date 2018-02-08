@@ -7,11 +7,10 @@
     "dev-test": "wdio wdio.conf.dev.js",
     "dev-watch-test": "chimp --mocha --watch --path=test",
     "test": "wdio wdio.conf.js",
-    "start-selenium-server-with-docker": "docker-compose up -d",
-    "stutdown-selenium-server-with-docker": "docker-compose down",
+    "start-selenium-server-with-docker": "docker-compose down && docker-compose up -d",
     "build-with-docker": "docker build -t wdio-demo .",
-    "run-test-with-docker": "docker run -i --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier wdio-demo npm test",
-    "test-with-docker": "npm run start-selenium-server-with-docker && npm run build-with-docker && npm run run-test-with-docker && npm run stutdown-selenium-server-with-docker"
+    "run-test-with-docker": "docker rm -f wdio-demo_test || true && docker run -i --rm -v $(pwd)/test-reports:/wdio-demo/test-reports --network=wdiodemo_front-tier --name=wdio-demo_test wdio-demo npm test",
+    "test-with-docker": "npm run start-selenium-server-with-docker && npm run build-with-docker && npm run run-test-with-docker"
   },
   "keywords": [],
   "author": "",
