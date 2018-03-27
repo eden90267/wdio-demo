@@ -1,4 +1,6 @@
-exports.config = {
+const NODE_ENV = process.env.NODE_ENV || 'development';
+
+let config = {
 
   //
   // ==================
@@ -130,8 +132,8 @@ exports.config = {
   // commands. Instead, they hook themselves up into the test process.
 
   // services: ['testingbot'],
-  host: 'wdio-demo_hub',
-  port: 4444,
+  // host: 'hub',
+  // port: 4444,
   // user: process.env.TESTINGBOT_KEY,
   // key: process.env.TESTINGBOT_SECRET,
 
@@ -146,13 +148,7 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: http://webdriver.io/guide/reporters/dot.html
-  // reporters: ['dot', 'spec'],
-  reporters: ['dot', 'spec', 'junit'],
-  reporterOptions: {
-    junit: {
-      outputDir: './test-reports'
-    }
-  },
+  reporters: ['dot', 'spec'],
   //
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
@@ -271,4 +267,17 @@ exports.config = {
    */
   // onComplete: function(exitCode, config, capabilities) {
   // }
+};
+
+if (NODE_ENV === 'production') {
+  config.reporters = ['dot', 'spec', 'allure'];
+  config.reporterOptions = {
+    junit: {
+      outputDir: './allure-results'
+    }
+  };
+  config.host = 'hub';
+  config.port = 4444;
 }
+
+exports.config = config;

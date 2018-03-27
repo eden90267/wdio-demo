@@ -116,3 +116,6 @@ fabric.properties
 # my project
 errorShots
 test-reports
+.yarn-cache
+allure-results
+allure-report

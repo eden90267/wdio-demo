@@ -3,7 +3,7 @@ var LoginPage = require('../pageobjects/login.page');
 
 var config = require('./test-data');
 
-describe('第一個前端測試程式', function () {
+describe('登入/登出測試', function () {
 
   beforeEach(function() {
     LoginPage.pause();

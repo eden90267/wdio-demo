@@ -1,0 +1,50 @@
+pipeline:
+  install:
+    image: node:8
+    commands:
+      - sleep 5
+      - yarn config set cache-folder .yarn-cache
+      - yarn install --pure-lockfile
+
+  test:
+    image: node:8
+    commands:
+      - npm test
+
+  report:
+    image: joakimbeng/java-node
+    commands:
+      - npm run gen-report
+    when:
+      status: [ success, failure ]
+
+  slack:
+    image: plugins/slack
+    channel: cteam-drone-ci
+    webhook: https://hooks.slack.com/services/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
+    when:
+      status: [ success, failure ]
+
+
+services:
+  hub:
+    image: selenium/hub:3.9.1
+    ports:
+      - "4444:4444"
+    expose:
+      - "4444"
+
+  firefox:
+    image: selenium/node-firefox:3.9.1
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      HUB_HOST: hub
+
+  chrome:
+    image: selenium/node-chrome:2.53.1
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=hub
+      - HUB_PORT_4444_TCP_PORT=4444

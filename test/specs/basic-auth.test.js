@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-describe('test', function () {
+describe('basic auth 測試', function () {
   it('basic auth', () => {
     // 前往測試頁面
     browser.url('http://admin:admin@the-internet.herokuapp.com/basic_auth')
