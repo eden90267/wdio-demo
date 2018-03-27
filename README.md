@@ -121,4 +121,3 @@ $ npm run open-report
 - [Page Objects Pattern on WebDriverIO](https://eden-liu.com/frontend/page-objects-on-webdriverio/)
 - [WebDriverIO with Docker](https://eden-liu.com/frontend/webdriverio-with-docker/)
 - [WebDriverIO with CI](https://eden-liu.com/devops/webdriverio-with-ci/)
-- [wdio-demo github repo](https://github.com/eden90267/wdio-demo)
