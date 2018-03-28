@@ -3,7 +3,6 @@ pipeline:
     image: node:8
     commands:
       - sleep 5
-      - yarn config set cache-folder .yarn-cache
       - yarn install --pure-lockfile
 
   test:
