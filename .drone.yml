@@ -27,23 +27,22 @@ pipeline:
 
 services:
   hub:
-    image: selenium/hub:3.9.1
+    image: selenium/hub:3.13.0-argon
     ports:
       - "4444:4444"
-    expose:
-      - "4444"
 
   firefox:
-    image: selenium/node-firefox:3.9.1
+    image: selenium/node-firefox:3.13.0-argon
+    detach: true
     volumes:
       - /dev/shm:/dev/shm
     environment:
       HUB_HOST: hub
 
   chrome:
-    image: selenium/node-chrome:2.53.1
+    image: selenium/node-chrome:3.13.0-argon
+    detach: true
     volumes:
       - /dev/shm:/dev/shm
     environment:
-      - HUB_PORT_4444_TCP_ADDR=hub
-      - HUB_PORT_4444_TCP_PORT=4444
+      HUB_HOST: hub
